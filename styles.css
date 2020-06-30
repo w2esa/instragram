@@ -1,3 +1,8 @@
+:root {
+  --b3f: 250, 250, 250;
+  --btn-hidden: #b2dffc;
+  --btn-visible: #3897f0;
+}
 *,
 *::before,
 *::after {
@@ -8,7 +13,8 @@
 
 html {
   font-size: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
   box-sizing: border-box;
 }
 
@@ -59,7 +65,7 @@ body {
 
 .form-data form {
   background-color: #fff;
-  border: 2px solid #eee;
+  border: 1px solid #dbdbdb;
   display: flex;
   flex-direction: column;
   padding: 2rem 4rem;
@@ -72,23 +78,59 @@ body {
 }
 
 .form-data form input {
-  padding: 0.8rem;
+  width: 100%;
+  padding: 1rem 0.8rem;
   margin-bottom: 0.5rem;
-  border: 2px solid #eee;
-  border-radius: 0.4rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 0.2rem;
+  background: rgba(var(--b3f, 250, 250, 250), 1);
+  outline: none;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+.form-data form input:focus {
+  border: 1px solid rgb(165, 164, 164);
+}
+/* .form-group {
+  position: relative;
+}
+.form-label {
+  text-align: left;
+  font-size: 1.3rem;
+  margin-left: 0.9rem;
+  color: rgb(165, 164, 164);
+  position: absolute;
+  top: 25%;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.form-control:focus + .form-label {
+  font-size: 1rem;
+  top: 0;
+} */
+::placeholder {
+  color: rgb(165, 164, 164);
+  font-weight: normal;
 }
 
 .form-btn {
   margin-top: 1.5rem;
   margin-bottom: 3rem;
   height: 3rem;
-  background-color: #3897f0;
+  background-color: var(--btn-hidden);
   font-size: 1.4rem;
   color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
+  outline: none;
 }
 
 .password-reset {
@@ -102,12 +144,12 @@ body {
   color: #262626;
   padding: 2rem 0;
   background-color: #fff;
-  border: 2px solid #eee;
+  border: 1px solid #dbdbdb;
   margin: 1rem 0;
 }
 
 .sign-up a {
-  color: #3897f0;
+  color: #0095f6;
   font-weight: bold;
 }
 
